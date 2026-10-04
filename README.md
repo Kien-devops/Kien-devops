@@ -35,7 +35,7 @@ My engineering philosophy:
 
 <p align="center">
   <a href="https://www.kiendev.site/#experience" target="_blank">
-    <img src="aws-certs.svg" alt="AWS Certifications Trophy Case" width="100%" />
+    <img src="aws-certifications.svg" alt="AWS Certifications Trophy Case" width="100%" />
   </a>
 </p>
 
