@@ -52,26 +52,6 @@ My engineering philosophy:
 
 ---
 
-### 🚀 Featured Engineering Projects
-
-#### 1. [AWS Multi-Region Disaster Recovery Platform (NT533)](https://github.com/Kien-devops/NT533)
-*Cost-optimized Backup & Restore architecture between Sydney (`ap-southeast-2` - Primary) and Singapore (`ap-southeast-1` - Cold Standby) with 100% automated failover.*
-- **Automated Failover Orchestration**: CloudWatch Composite Alarm triggers cross-region EventBridge events to execute an AWS Step Functions State Machine (57 states).
-- **Zero Standby Compute Cost**: Cold Standby state incurs $0 running compute/database costs until failover is initiated, utilizing encrypted AWS Backup Vault cross-region replication and ECR replication.
-- **Full-Stack Provisioning**: Automated DynamoDB singleton locking, CloudFormation runtime stack deployment, RDS snapshot restoration, ECS Fargate auto-scaling with 3 target group health checks, and Route 53 SECONDARY failover record UPSERT.
-- **RTO & RPO**: Actual RTO 20–40 minutes, RPO ≤ 6 hours.
-- **Tech Stack**: AWS CloudFormation, Step Functions, ECS Fargate, Amazon RDS PostgreSQL, AWS Backup, Route 53, EventBridge, Lambda, DynamoDB, ECR, Docker, Python, PowerShell.
-
-#### 2. [On-Premise K3s DevSecOps & Microservices Platform](https://github.com/Kien-devops/k3s-onprem) | [App Demo: app1.onprem.site](https://app1.onprem.site)
-*Production-ready bare-metal K3s infrastructure managed via Ansible combined with a secured microservices CI/CD pipeline ([app1](https://github.com/Kien-devops/app1)).*
-- **Bare-Metal Cluster Automation**: 3-node physical Ubuntu setup automated 100% with Ansible roles/playbooks, Flannel VXLAN overlay network, and HAProxy for TCP ingress/API load balancing.
-- **Zero-Port Public Access**: Safe public ingress routing via Traefik and Cloudflare Tunnel (`app1.onprem.site`) without open firewall ports.
-- **Microservices Architecture**: React/Vite frontend (NGINX unprivileged) with 3 decoupled Node.js microservices (Auth, User, Product) equipped with structured JSON logging and Prometheus `/metrics`.
-- **Shift-Left Security & CI/CD**: Container execution in non-root mode, read-only root filesystems, dropped Linux capabilities, default-deny NetworkPolicies, automated Trivy scanning for CVEs, immutable Git SHA tagging to GHCR, and zero-downtime rolling updates.
-- **Tech Stack**: Kubernetes (K3s), Ansible, HAProxy, Traefik, GitHub Actions, Trivy, GHCR, Cloudflare Tunnel, Docker, Node.js, React, Nginx, Linux.
-
----
-
 ### 🛡️ DevSecOps & Cloud Security Practices
 
 *   **🔒 Cloud Infrastructure Security (AWS)**
